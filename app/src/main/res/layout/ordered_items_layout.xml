@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginTop="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imgfood"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/orderfood"/>
+            <TextView
+                android:id="@+id/customerNameText"
+                android:layout_toRightOf="@+id/imgfood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SPindia Order"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/img1"
+                android:text="Done"
+                android:textColor="#1C1C1C"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"/>
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/accept"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/deliveryAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="Address"
+            android:textColor="#717070"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/totAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Rs 101"
+            android:textColor="#717070"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/orderId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Order ID:859869897896876"
+            android:textColor="#717070"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time left: "
+                android:textSize="14sp"
+                android:layout_marginRight="10dp"
+                android:textColor="#717070"/>
+            <ir.samanjafari.easycountdowntimer.EasyCountDownTextview
+                android:id="@+id/easyCountDownTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:showHours="false"
+                app:textSize="13sp"
+                app:digitBackground="@color/white"
+                app:textColor="@color/colorAccent"
+                app:setAnimation="true"
+                app:colonColor="#717070"
+                app:showDays="false"
+                android:layout_marginEnd="3dp"/>
+            <TextView
+                android:id="@+id/timeFormatText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/colorAccent"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/horizontal_line" />
+
+        <TextView
+            android:id="@+id/ItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ITEMS:"
+            android:textColor="#717070"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/orderedItemContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/extraInstructionsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/totAmount"
+            android:layout_marginTop="5dp"
+            android:text="\u2022 Please make the food less spicy"
+            android:textColor="#717070"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/orderTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Dec"
+                android:textColor="#717070"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/codMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:text="COD"
+                android:textColor="#1971B8"
+                android:textSize="14sp" />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/paidMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:text="PAID"
+                android:textColor="#2196F3"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/declineBtn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/decline_orderbtn_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="DECLINE"
+                    android:textColor="#CC362F"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/acceptBtn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/accept_orderbtn_background">
+
+                <TextView
+                    android:id="@+id/text_accept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="ACCEPT"
+                    android:textColor="#306C1B"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/lay_track_order"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/back_btn">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="TRACK ORDER"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lay_chat"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/back_btn">
+
+                <TextView
+                    android:id="@+id/text_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="CHAT"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="22dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@+id/text_chat"
+                    android:src="@drawable/chat" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>
